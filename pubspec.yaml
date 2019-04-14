@@ -39,7 +39,8 @@ dev_dependencies:
   intl: ^0.15.7
   uuid:
   firebase_database:
-
+  flutter_search_panel: ^1.0.1
+  flutter_typeahead: ^1.4.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
