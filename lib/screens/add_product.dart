@@ -7,7 +7,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:shop_app_admin/db/product.dart';
 import '../db/category.dart';
 import '../db/brand.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+//import 'package:fluttertoast/fluttertoast.dart';
 
 class AddProduct extends StatefulWidget {
   @override
@@ -480,26 +480,29 @@ class _AddProductState extends State<AddProduct> {
             imageUrl3 = await snapshot3.ref.getDownloadURL();
             List<String> imageList = [imageUrl1, imageUrl2, imageUrl3];
 
-            productService.uploadProduct(
-                productName: productNameController.text,
-                price: double.parse(priceController.text),
-                sizes: selectedSizes,
-                images: imageList,
-                quantity: int.parse(quatityController.text));
+            productService.uploadProduct({
+              "name":productNameController.text,
+              "price":double.parse(priceController.text),
+              "sizes":selectedSizes,
+              "images":imageList,
+              "quantity":int.parse(quatityController.text),
+              "brand":_currentBrand,
+              "category":_currentCategory
+            });
             _formKey.currentState.reset();
             setState(() => isLoading = false);
-            Fluttertoast.showToast(msg: 'Product added');
+//            Fluttertoast.showToast(msg: 'Product added');
             Navigator.pop(context);
           });
         } else {
           setState(() => isLoading = false);
 
-          Fluttertoast.showToast(msg: 'select atleast one size');
+//          Fluttertoast.showToast(msg: 'select atleast one size');
         }
       } else {
         setState(() => isLoading = false);
 
-        Fluttertoast.showToast(msg: 'all the images must be provided');
+//        Fluttertoast.showToast(msg: 'all the images must be provided');
       }
     }
   }

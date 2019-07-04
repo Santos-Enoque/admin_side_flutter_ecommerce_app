@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+//import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shop_app_admin/screens/add_product.dart';
 import '../db/category.dart';
 import '../db/brand.dart';
@@ -261,7 +261,7 @@ class _AdminState extends State<Admin> {
           if(categoryController.text != null){
             _categoryService.createCategory(categoryController.text);
           }
-          Fluttertoast.showToast(msg: 'category created');
+//          Fluttertoast.showToast(msg: 'category created');
           Navigator.pop(context);
         }, child: Text('ADD')),
         FlatButton(onPressed: (){
@@ -295,7 +295,7 @@ class _AdminState extends State<Admin> {
           if(brandController.text != null){
             _brandService.createBrand(brandController.text);
           }
-          Fluttertoast.showToast(msg: 'brand added');
+//          Fluttertoast.showToast(msg: 'brand added');
           Navigator.pop(context);
         }, child: Text('ADD')),
         FlatButton(onPressed: (){

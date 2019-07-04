@@ -32,7 +32,7 @@ dev_dependencies:
   google_sign_in: ^3.2.4
   cloud_firestore: ^0.8.2+3
   firebase_storage: ^1.0.4
-  fluttertoast: ^2.2.3
+#  fluttertoast: ^2.2.3
   shared_preferences: ^0.4.3
   image_picker: ^0.4.10
   cached_network_image: ^0.5.1
