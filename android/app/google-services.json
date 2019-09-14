@@ -1,41 +1,77 @@
 {
   "project_info": {
-    "project_number": "367488650258",
-    "firebase_url": "https://ecommerce-ada5d.firebaseio.com",
-    "project_id": "ecommerce-ada5d",
-    "storage_bucket": "ecommerce-ada5d.appspot.com"
+    "project_number": "988325157516",
+    "firebase_url": "https://flutter-ecommerce-992d6.firebaseio.com",
+    "project_id": "flutter-ecommerce-992d6",
+    "storage_bucket": "flutter-ecommerce-992d6.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:367488650258:android:ca786232e79c2f08",
+        "mobilesdk_app_id": "1:988325157516:android:33f1611500cfdc8e8e79a9",
         "android_client_info": {
-          "package_name": "com.santosenoque.shop_app_admin"
+          "package_name": "com.santosenoque.chatapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "367488650258-3p3qembbsm374cuuh74atoqr4qutflms.apps.googleusercontent.com",
+          "client_id": "988325157516-nus0pljn7alu98jtg59dai8d8ske4h2i.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBCSGvPtoSBTPmJxSfaVSDWdffCSz-GQq8"
+          "current_key": "AIzaSyBJ-R9Qzix_CHLsYXwkYWH-sDRLPitFtYc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "367488650258-3p3qembbsm374cuuh74atoqr4qutflms.apps.googleusercontent.com",
+              "client_id": "988325157516-nus0pljn7alu98jtg59dai8d8ske4h2i.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "367488650258-dr42sc9vk5mbcoq6sh888c850bju8jm0.apps.googleusercontent.com",
+              "client_id": "988325157516-ipcl9d7viqkvio6q7v1hnj6r59m0o22o.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.santosenoque.shopAppAdmin"
+                "bundle_id": "com.santosenoque.chatApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988325157516:android:cb020a6c422ced128e79a9",
+        "android_client_info": {
+          "package_name": "com.santosenoque.shop_app_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988325157516-nus0pljn7alu98jtg59dai8d8ske4h2i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ-R9Qzix_CHLsYXwkYWH-sDRLPitFtYc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "988325157516-nus0pljn7alu98jtg59dai8d8ske4h2i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "988325157516-ipcl9d7viqkvio6q7v1hnj6r59m0o22o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.santosenoque.chatApp"
               }
             }
           ]
