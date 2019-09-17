@@ -42,6 +42,7 @@ dev_dependencies:
   flutter_search_panel: ^1.0.1
   flutter_typeahead: ^1.4.0
   charts_flutter: ^0.8.0
+  provider: ^3.1.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec

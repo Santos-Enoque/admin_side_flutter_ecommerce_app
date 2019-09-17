@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app_admin/providers/app_states.dart';
 import 'package:shop_app_admin/widgets/small_card.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:provider/provider.dart';
+import 'add_product.dart';
 
 
 class Dashboard extends StatefulWidget {
@@ -44,6 +47,7 @@ class _DashboardState extends State<Dashboard> {
 
   @override
   Widget build(BuildContext context) {
+    final appState = Provider.of<AppState>(context);
     return Scaffold(
       backgroundColor: Colors.grey[200],
       body: SafeArea(child: Row(
@@ -63,74 +67,175 @@ class _DashboardState extends State<Dashboard> {
             child: Column(
               children: <Widget>[
                 IconButton(icon: Icon(Icons.menu, color: Colors.black,), onPressed: (){}),
-                Wrap(
-                  direction: Axis.horizontal,
-                  children: <Widget>[
-                    RotatedBox(
-                      quarterTurns: -1,
-                      child: Text('Dashboard',),
-                    ),
-
-                    SizedBox(
-                      width: 10,
-                    ),
-
-                    Container(
-                      height: 68,
-                      width: 5,
-                      color: Colors.black,
-                    )
-                  ],
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                Wrap(
-                  direction: Axis.horizontal,
-                  children: <Widget>[
-                    RotatedBox(
-                      quarterTurns: -1,
-                      child: Text('Products',),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                Wrap(
-                  direction: Axis.horizontal,
-                  children: <Widget>[
-                    RotatedBox(
-                      quarterTurns: -1,
-                      child: Text('Categories',),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-
-                Wrap(
-                  direction: Axis.horizontal,
-                  children: <Widget>[
-                    RotatedBox(
-                      quarterTurns: -1,
-                      child: Text('Brands',),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                Expanded(
+                InkWell(
+                  onTap: (){
+                    appState.changeScreen(Screen.DASH);
+                  },
                   child: Wrap(
                     direction: Axis.horizontal,
                     children: <Widget>[
                       RotatedBox(
                         quarterTurns: -1,
-                        child: Text('Orders',),
+                        child: Text('Dashboard',),
+                      ),
+
+                      Visibility(
+                        visible: appState.selectedScreen == Screen.DASH,
+                        child: Wrap(
+                          children: <Widget>[
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              height: 68,
+                              width: 5,
+                              color: Colors.black,
+                            )
+
+                          ],
+                        ),
+                      ),
+
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                InkWell(
+                  onTap: (){
+                    appState.changeScreen(Screen.PRODUCTS);
+                    Navigator.push(context, MaterialPageRoute(builder: (_)=>AddProduct()));
+                  },
+                  child: Wrap(
+                    direction: Axis.horizontal,
+                    children: <Widget>[
+                      RotatedBox(
+                        quarterTurns: -1,
+                        child: Text('Products',),
+
+                      ),
+
+                      Visibility(
+                        visible: appState.selectedScreen == Screen.PRODUCTS,
+                        child: Wrap(
+                          children: <Widget>[
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              height: 58,
+                              width: 5,
+                              color: Colors.black,
+                            )
+
+                          ],
+                        ),
                       ),
                     ],
+                  ),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                InkWell(
+                  onTap: (){
+                    appState.changeScreen(Screen.CATEGORIES);
+                  },
+                  child: Wrap(
+                    direction: Axis.horizontal,
+                    children: <Widget>[
+                      RotatedBox(
+                        quarterTurns: -1,
+                        child: Text('Categories',),
+                      ),
+                      Visibility(
+                        visible: appState.selectedScreen == Screen.CATEGORIES,
+                        child: Wrap(
+                          children: <Widget>[
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              height: 68,
+                              width: 5,
+                              color: Colors.black,
+                            )
+
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+
+                InkWell(
+                  onTap: (){
+                    appState.changeScreen(Screen.BRANDS);
+                  },
+                  child: Wrap(
+                    direction: Axis.horizontal,
+                    children: <Widget>[
+                      RotatedBox(
+                        quarterTurns: -1,
+                        child: Text('Brands',),
+                      ),
+
+                      Visibility(
+                        visible: appState.selectedScreen == Screen.BRANDS,
+                        child: Wrap(
+                          children: <Widget>[
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              height: 48,
+                              width: 5,
+                              color: Colors.black,
+                            )
+
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Expanded(
+                  child: InkWell(
+                    onTap: (){
+                      appState.changeScreen(Screen.ORDERS);
+                    },
+                    child: Wrap(
+                      direction: Axis.horizontal,
+                      children: <Widget>[
+                        RotatedBox(
+                          quarterTurns: -1,
+                          child: Text('Orders',),
+                        ),
+                        Visibility(
+                          visible: appState.selectedScreen == Screen.ORDERS,
+                          child: Wrap(
+                            children: <Widget>[
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Container(
+                                height: 48,
+                                width: 5,
+                                color: Colors.black,
+                              )
+
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 
